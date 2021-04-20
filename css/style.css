@@ -80,12 +80,12 @@ table {
 		justify-content: center;
 		list-style: none;
 	}
-	li a{
+	.link{
 		color: white;
 		font-family: 'Poppins', serif;
 		margin: 20px;
 	}
-	a:active{
+	.active{
 		border-bottom: 2px solid white;
 	}
 	.genres{
