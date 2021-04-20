@@ -13,6 +13,11 @@
     <section class="header"><div class="backhead"></div>
         <h1>DooWap</h1>
     </div>
+        <header>
+        <form  id="form">
+            <input type="text" placeholder="Search" id="search" class="search">
+        </form>
+    </header>
     <!-- Menu -->
     <section>
         <ul id="myDIV">
@@ -30,47 +35,12 @@
             this.className += " active";
         });
     }
-    // GENRES//
-        </script>
-    
-    <section class="genres">
-        <div>
-            
-        </div>
-
-    </section>
-    
-    <script>
-        const API_KEY = "cc8a996114ccd712c62e4ea4975135a9";
-        getGenres();
-        getMoviesByGenre(28);
-        function getGenres() {
-          fetch(
-            `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=en-US`
-          )
-            .then((result) => result.json())
-            .then((data) => {
-              console.log(data);
-            })
-            .catch(function (err) {
-              alert(err);
-            });
-        }
-        async function getMoviesByGenre(id_genre) {
-          let url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${id_genre}`;
-          fetch(url)
-            .then((result) => result.json())
-            .then((data) => {
-              console.log(data);
-              const films = data.results;
-              // random
-              console.log(films[0]);
-            })
-            .catch(function (err) {
-              alert(err);
-            });
-        }
       </script>
+    <!-- // GENRES// -->
+
+    <div id="tags"></div>
+    <main id="main"></main>
+
     <script type="text/javascript" src="js/scriptBASIC.js"></script>
 </body>
 </html>
