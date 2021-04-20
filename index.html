@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DooWap</title>
-</head>
-<body>
-    
-    <h1>Hello Doowapeurs</h1>
+  </head>
+  <body>
+    <h1>Hello Doowapeurs(euses)</h1>
+    <p>
+      <img
+        src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uwjaCH7PiWrkz7oWJ4fcL3xGrb0.jpg"
+        alt="Jaws"
+      />
+    </p>
 
-    <script type="text/javascript" src="js/scriptBASIC.js"></script>
-</body>
+    
+    <script>
+      const API_KEY = "cc8a996114ccd712c62e4ea4975135a9";
+      getGenres();
+      getMoviesByGenre(28);
+      function getGenres() {
+        fetch(
+          `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=en-US`
+        )
+          .then((result) => result.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch(function (err) {
+            alert(err);
+          });
+      }
+      async function getMoviesByGenre(id_genre) {
+        let url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${id_genre}`;
+        fetch(url)
+          .then((result) => result.json())
+          .then((data) => {
+            console.log(data);
+            const films = data.results;
+            // random
+            console.log(films[0]);
+          })
+          .catch(function (err) {
+            alert(err);
+          });
+      }
+    </script>
+  </body>
 </html>
