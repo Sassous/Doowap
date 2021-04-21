@@ -21,9 +21,9 @@
     <!-- Menu -->
     <section>
         <ul id="myDIV">
-            <li><a class="link" href="../doowap/index.html">Genres</a></li>
-            <li><a class="link active" href="../doowap/personality.html">Personality test</a></li>
-            <li><a class="link" href="../doowap/popularity.html">Popularity</a></li>
+            <li><a class="link" href="index.html">Genres</a></li>
+            <li><a class="link active" href="personality.html">Personality test</a></li>
+            <li><a class="link" href="popularity.html">Popularity</a></li>
         </ul>
         <script>
             var header = document.getElementById("myDIV");
@@ -35,6 +35,7 @@
             this.className += " active";
         });
     }
+
       </script>
     <!-- Contenu quizz -->
       <div>
@@ -46,15 +47,15 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var api = "planets";
+      var api = "astro_details";
       var userId = "616412";
       var apiKey = "cd71dd69432d204b952eb9feca435cad";
       var data = {
-        day: 12,
+        day: 22,
         month: 3,
-        year: 1992,
-        hour: 2,
-        min: 23,
+        year: 2000,
+        hour: 23,
+        min: 00,
         lat: 19.132,
         lon: 72.342,
         tzone: 5.5,
@@ -81,6 +82,7 @@
         }
       );
     </script>
-
+    <div id="tags"></div>
+<script type="text/javascript" src="js/scriptAstro.js"></script>
 </body>
 </html>
