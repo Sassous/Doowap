@@ -222,6 +222,12 @@ main{
 .no-results{
     color:white;
 }
-
+h2{
+    font-family: 'Poppins', serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
 
 }

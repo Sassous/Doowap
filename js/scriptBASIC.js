@@ -1,4 +1,6 @@
-// const API_KEY = "cc8a996114ccd712c62e4ea4975135a9";
+//1ca7c24a66948c41ff60b0d56c8ac91a = API horoscope 
+
+//const API_KEY = "cc8a996114ccd712c62e4ea4975135a9";
 
 // const IMG_API = "https://api.themoviedb.org/3/configuration?api_key=cc8a996114ccd712c62e4ea4975135a9";
 

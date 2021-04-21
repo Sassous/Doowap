@@ -21,9 +21,9 @@
     <!-- Menu -->
     <section>
         <ul id="myDIV">
-            <li><a class="link active" href="../doowap/index.html">Genres</a></li>
+            <li><a class="link" href="../doowap/index.html">Genres</a></li>
             <li><a class="link" href="../doowap/personality.html">Personality test</a></li>
-            <li><a class="link" href="../doowap/popularity.html">Popularity</a></li>
+            <li><a class="link active" href="../doowap/popularity.html">Popularity</a></li>
         </ul>
         <script>
             var header = document.getElementById("myDIV");
@@ -36,11 +36,27 @@
         });
     }
       </script>
-    <!-- // GENRES// -->
 
-    <div id="tags"></div>
-    <main id="main"></main>
+      <script>
+const API_KEY = "cc8a996114ccd712c62e4ea4975135a9";
 
-    <script type="text/javascript" src="js/scriptBASIC.js"></script>
+getPopular();
+function getPopular() {
+  fetch(
+    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US`
+  )
+    .then((result) => result.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch(function (err) {
+      alert(err);
+    });
+}
+
+
+      </script>
+
+
 </body>
 </html>
