@@ -105,7 +105,7 @@ table {
 header{
     padding:1rem;
     display:flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: var(--secondary-color);
 }
 
@@ -229,5 +229,54 @@ h2{
     text-align: center;
     margin-top: 20px;
 }
+.darkmodebutton{
+    margin-right: 50px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px !important ;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: rgb(255, 209, 209);
 
+    /* / Support for all WebKit browsers. / */
+    -webkit-font-smoothing: antialiased;
+    /* / Support for Safari and Chrome. / */
+    text-rendering: optimizeLegibility;
+
+    /* / Support for Firefox. / */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* / Support for IE. */
+    font-feature-settings: 'liga';
+  }
+.dark-mode{
+    --primary-color:rgb(100, 23, 46);
+    --secondary-color: rgb(255, 160, 168);
+}
+.dark-mode .material-icons{
+    color: rgb(100, 23, 46) !important;
+}
+.filterbyrate{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 155px;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50px;
+    height: 30px;
+}
 }

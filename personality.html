@@ -6,84 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Poppins">
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
     <title>DooWap</title>
 </head>
+
 <body>
-    <section class="header"><div class="backhead"></div>
+  <section class="header">
+    <div class="backhead">
         <h1>DooWap</h1>
     </div>
         <header>
-        <form  id="form">
-            <input type="text" placeholder="Search" id="search" class="search">
-        </form>
+          <button style="margin-right: 290px" class="darkmodebutton" onclick="myFunction()">  
+            <span class="material-icons md-48">
+            light_mode
+            </span>
+          </button>
+
+        <script>
+          function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+          }
+        </script>
+
     </header>
     <!-- Menu -->
-    <section>
-        <ul id="myDIV">
-            <li><a class="link" href="index.html">Genres</a></li>
-            <li><a class="link active" href="personality.html">Personality test</a></li>
-            <li><a class="link" href="popularity.html">Popularity</a></li>
-        </ul>
-        <script>
-            var header = document.getElementById("myDIV");
-            var btns = header.getElementsByClassName("link");
-            for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
+  <section>
+    <ul id="myDIV">
+        <li><a class="link" href="index.html">Genres</a></li>
+        <li><a class="link active" href="personality.html">Personality test</a></li>
+        <li><a class="link" href="popularity.html">Popularity</a></li>
+    </ul>
+    <script>
+      var header = document.getElementById("myDIV");
+      var btns = header.getElementsByClassName("link");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
         });
-    }
-
-      </script>
+      }
+    </script>
     <!-- Contenu quizz -->
-      <div>
-          <h2>Do the test to find your movie !</h2>
-      </div>
-      <script
+    <div>
+        <h2>Do the test to find your movie !</h2>
+    </div>
+    <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
     <script>
-      /*var api = "astro_details";
-      var userId = "616412";
-      var apiKey = "cd71dd69432d204b952eb9feca435cad";
-      var data = {
-        day: 22,
-        month: 3,
-        year: 2000,
-        hour: 23,
-        min: 00,
-        lat: 19.132,
-        lon: 72.342,
-        tzone: 5.5,
-      };
-      var request = $.ajax({
-        url: "https://json.astrologyapi.com/v1/" + api,
-        method: "POST",
-        dataType: "json",
-        headers: {
-          authorization: "Basic " + btoa(userId + ":" + apiKey),
-          "Content-Type": "application/json",
-        },
-        data: JSON.stringify(data),
-      });
-      request.then(
-        function (res) {
-          console.log(res);
-          res.map((planet) => {
-            console.log(planet.sign);
-          });
-        },
-        function (err) {
-          console.log(err);
-        }
-      );*/
+    /*var api = "astro_details";
+    var userId = "616412";
+    var apiKey = "cd71dd69432d204b952eb9feca435cad";
+    var data = {
+      day: 22,
+      month: 3,
+      year: 2000,
+      hour: 23,
+      min: 00,
+      lat: 19.132,
+      lon: 72.342,
+      tzone: 5.5,
+    };
+    var request = $.ajax({
+      url: "https://json.astrologyapi.com/v1/" + api,
+      method: "POST",
+      dataType: "json",
+      headers: {
+        authorization: "Basic " + btoa(userId + ":" + apiKey),
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify(data),
+    });
+    request.then(
+      function (res) {
+        console.log(res);
+        res.map((planet) => {
+          console.log(planet.sign);
+        });
+      },
+      function (err) {
+        console.log(err);
+      }
+    );*/
     </script>
-    <div id="tags"></div>
-    <main id="main"></main>
-<script type="text/javascript" src="js/scriptAstro.js"></script>
+  <div id="tags"></div>
+  <main id="main"></main>
+  <script type="text/javascript" src="js/scriptAstro.js"></script>
 </body>
 </html>
