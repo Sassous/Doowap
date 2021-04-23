@@ -122,30 +122,29 @@ function clearBtn(){
 }
 
 getMovies(API_URL);
-
 function getMovies(url) {
 
     fetch(url).then(res => res.json()).then(data => {
         console.log(data.results)
+
         if(data.results.length !== 0){
-            showMovies(data.results);
+            showMovies(data.results)
+
         }else{
             main.innerHTML= `<h1 class="no-results">No Results Found</h1>`
         }
-         
        
     })
 
 }
 
-randomJoke(data.results);
-    var joke = data.results[Math.floor(Math.random()*data.results.length)];
-    this.setState({jokes: [joke] });
+
+
 
 function showMovies(data) {
     main.innerHTML = '';
 
-    data.forEach(movie => {
+    data.slice(-1).forEach(movie => {
         const {title, poster_path, vote_average, overview} = movie;
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
@@ -176,17 +175,3 @@ function getColor(vote) {
         return 'red'
     }
 }
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const searchTerm = search.value;
-    selectedGenre=[];
-    setGenre();
-    if(searchTerm) {
-        getMovies(searchURL+'&query='+searchTerm)
-    }else{
-        getMovies(API_URL);
-    }
-
-})
